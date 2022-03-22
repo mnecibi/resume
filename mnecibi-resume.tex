@@ -1,0 +1,124 @@
+\documentclass[]{mnecibi-resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Mehdi Necibi}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{mehdi.necibi.com}
+% vs how you want it to show up. If it's the same you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourWebsiteLink}{https://mehdi.necibi.com}
+\newcommand{\yourEmail}{mehdi.necibi@gmail.com}
+\newcommand{\yourPhone}{+33 6 95 40 39 46}
+\newcommand{\githubUserName}{mnecibi}
+\newcommand{\linkedInUserName}{mehdi-necibi-0813478a}
+
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
+    \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn}} $|$
+    \href{https://github.com/\githubUserName}{\underline{github}} $|$
+    \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+\end{center}
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{Master's degree in Computer Science}{University of Paris}{Paris, France}{2017}
+
+\courseWork{Data Structures and Algorithms; Operating Systems; Information systems; the Internet and the distribution of systems}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Work Experience}
+\resumeHeading{Capgemini Belgium}{Senior Consultant - Software Engineer}{Brussels, BE}{Sept 2017 – April 2022}
+\sectionsep
+
+\resumeHeading{Capgemini France}{Software Engineering Intern}{Paris, FR}{April 2017 - August 2017}
+\sectionsep
+
+\resumeHeading{French National Education}{Web developer}{Nantes, FR}{Dec 2018 – May 2019}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+
+\projectHeading{Toyota-Europe.com}{https://toyota-europe.com}{Technical Lead}
+Technologies used: Adobe Experience Manager, Google Analytics, Apache\\
+\sectionsep
+  
+\projectHeading{Ethias.be}{https://ethias.be/part/fr}{Technical Lead}
+Technologies used: Adobe Experience Manager, Adobe Analytics\\
+\sectionsep
+
+\projectHeading{Honeywell.com}{https://honeywell.com}{Full Stack Developer}
+Technologies used: Adobe Experience Manager\\
+\sectionsep
+
+\projectHeading{DVV.be}{https://www.dvv.be}{Devops}
+Technologies used: AWS, Chef, Vagrant\\
+\sectionsep
+
+\projectHeading{Vivay.be}{https://vivay.be}{Full-Stack developer}
+Technologies used: AEM, Adobe Analytics, Adobe Target\\
+\sectionsep
+
+\projectHeading{Coty.com}{https://dam.coty.com}{Asset share developer}
+Technologies used: Adobe Asset Share\\
+\sectionsep
+
+\projectHeading{Puratos.be}{https://puratos.be}{React developer}
+Technologies used: React\\
+\sectionsep
+
+\projectHeading{AtlasCopco.com}{https://atlascopco.com}{Full-stack Developer}
+Technologies used: Full-stack Developer\\
+\sectionsep
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{skillList}
+    \singleItem{Languages:}{Elixir, Javascript, Java, Python, Prolog, Bash, SQL}
+    \\
+    \singleItem{Web Development:}{React, Vue, JavaScript, TypeScript, HTML/CSS}
+    \\
+    \singleItem{Devops:}{AWS, GCP, Kubernetes, Vagrant, Chef, Docker, Jenkins, SonarQube, Nexus, Artifactory, Bamboo}
+    \\
+    \singleItem{Technology:}{Nginx, Apache, \LaTeX, MongoDB, PostgreSQL, Jira, Bitbucket}
+\end{skillList}
+\end{document}
